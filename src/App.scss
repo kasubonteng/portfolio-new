@@ -4,6 +4,80 @@
   align-items: center;
 }
 
+.app__container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.app__wrapper {
+  flex: 1;
+  width: 100%;
+  flex-direction: column;
+  padding: 4rem 2rem;
+
+  @media screen and (max-width: 450px) {
+    padding: 4rem 1rem 2rem;
+  }
+}
+
+.app__social {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+
+  a {
+    background-color: var(--body-color);
+    color: var(--title-color);
+    border: 1px solid var(--light-gray-color);
+    margin: 0.25rem 0;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--body-color);
+      background-color: var(--title-color);
+    }
+  }
+}
+
+.app__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 1rem;
+
+  .app__navigation-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cbcbcb;
+    margin: 0.5rem;
+
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #757575;
+    }
+
+    @media screen and (min-width: 2000px) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
 .section {
   padding: 6rem 0 2rem;
 }
@@ -41,6 +115,7 @@
   padding: 1.25rem 2rem;
   border-radius: 1rem;
   font-weight: var(--font-medium);
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: var(--title-color-dark);
@@ -58,13 +133,29 @@
 
 // LAPTOP
 @media screen and (max-width: 992px) {
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 /* For medium devices */
 @media screen and (max-width: 768px) {
+  .section {
+    padding: 2rem 0 4rem;
+  }
 }
+
 @media screen and (max-width: 576px) {
 }
+
 /* For small devices */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
+  .app__navigation {
+    display: none;
+  }
 }

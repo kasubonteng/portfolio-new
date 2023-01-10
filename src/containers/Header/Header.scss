@@ -1,0 +1,151 @@
+.header {
+  display: flex;
+}
+
+.header__content {
+  display: flex;
+}
+
+.header__title {
+  font-size: var(--large-fs);
+  margin-bottom: 0.25rem;
+  max-width: 400px;
+}
+
+.header__subtitle {
+  position: relative;
+  font-size: var(--h3-fs);
+  font-weight: var(--font-normal);
+  margin-bottom: 1rem;
+}
+
+.header__description {
+  max-width: 400px;
+  margin-bottom: 3rem;
+}
+
+.header__data {
+  margin-right: 8rem;
+  margin-top: 3.5rem;
+}
+
+.header__img {
+  width: 300px;
+  height: 300px;
+  background: url('../../assets/profile.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 0 9px rgb(255 255 255/30%);
+  order: 1;
+  justify-self: center;
+  animation: profile_animate 8s ease-in-out infinite 1s;
+}
+
+@keyframes profile_animate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+.header__scroll {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.wheel {
+  animation: scroll 1s ease infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(10%);
+  }
+}
+
+.header__scroll-name {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  margin-right: 0.25rem;
+  margin-left: 5px;
+}
+
+.home__scroll-arrow {
+  font-size: 1.25rem;
+  color: var(--title-color);
+
+  animation: scroll 1s ease infinite;
+}
+
+@media screen and (max-width: 992px) {
+  .header__title {
+    font-size: var(--h1-fs);
+  }
+
+  .home__hand {
+    width: 26px;
+    height: 26px;
+  }
+
+  .header__data {
+    margin-right: 5rem;
+  }
+
+  .header__description {
+    max-width: 250px;
+    margin-bottom: 2.5rem;
+  }
+
+  .header__img {
+    width: 250px;
+    height: 250px;
+    box-shadow: inset 0 0 0 8px rgb(255 255 255/30%);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  // .section {
+  //   padding-top: 0;
+  // }
+
+  .header__content {
+    flex-direction: column;
+  }
+
+  .header__description {
+    max-width: initial;
+  }
+
+  .header__img {
+    order: initial;
+    box-shadow: inset 0 0 0 6px Orgb (255 255 255 / 30%);
+    width: 200px;
+    height: 200px;
+  }
+
+  .header__scroll {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .home__hand {
+    width: 22px;
+    height: 22px;
+  }
+}
