@@ -1,5 +1,6 @@
 .header {
   display: flex;
+  padding: 6rem 0 2rem;
 }
 
 .header__content {
@@ -138,7 +139,10 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
+  .header {
+    padding-left: 2.5rem;
+  }
   .header__img {
     width: 180px;
     height: 180px;

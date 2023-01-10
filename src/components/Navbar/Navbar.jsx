@@ -52,7 +52,7 @@ const Navbar = () => {
         <ul className="navbar__links">
           {navListItems.map((item) => (
             <li className="app__flex" key={item.name}>
-              <a href={`#${item.name}`} className="navbar__link">
+              <a href={`#${item.name.toLowerCase()}`} className="navbar__link">
                 <i>{item.icon}</i>
                 {item.name}
               </a>

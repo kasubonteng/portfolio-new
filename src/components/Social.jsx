@@ -9,14 +9,17 @@ const socials = [
   {
     icon: <UilTwitter />,
     link: 'https"//www.twitter.com',
+    name: 'twitter',
   },
   {
     icon: <UilGithubAlt />,
     link: 'https"//www.github.com',
+    name: 'github',
   },
   {
     icon: <UilLinkedin />,
     link: 'https"//www.linkedin.com',
+    name: 'linkedin',
   },
 ];
 

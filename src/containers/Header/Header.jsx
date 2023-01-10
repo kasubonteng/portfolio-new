@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-import AppWrap from '../../wrapper/AppWrap';
-import { Data, ScrollDown } from '../../components';
 import './Header.scss';
+import Data from './Data';
+
+import { ScrollDown } from '../../components';
+import { AppWrap } from '../../wrapper';
 
 const Header = () => {
   return (
-    <header className="header section">
+    <header className="header">
       <motion.div
         className="header__container container"
         id="home"
